@@ -6,12 +6,12 @@ function ::CreateShutterActuator()
 
   object oLvl = cObj.DPByControl("BLIND.LEVEL");
   object oStop = cObj.DPByControl("BLIND.STOP");
-  integer oLvlId = 0;
-  integer oStopId = 0;
+  integer iLvlId = 0;
+  integer iStopId = 0;
   integer iLvl = 0;
   if (oLvl)
   {
-    oLvlId = oLvl.ID();
+    iLvlId = oLvl.ID();
     iLvl = oLvl.Value();
     if( oLvl.ValueUnit() == "100%" )
     {
@@ -20,7 +20,7 @@ function ::CreateShutterActuator()
   }
   if (oStop)
   {
-    oStopId = oStop.ID();
+    iStopId = oStop.ID();
   }
 
   WriteLine("<td colspan='2' id='shutter"#chnId#"' class='CLASS02549' >&nbsp;</td>");
